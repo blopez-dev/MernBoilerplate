@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 
 const apiUrl = 'http://localhost:4000/products';
 
-function loadProducts() {
+export function loadProducts() {
   return async (dispatch) => {
     const { data } = await axios(apiUrl);
     // eslint-disable-next-line no-console
@@ -15,4 +15,9 @@ function loadProducts() {
   };
 }
 
-export default loadProducts;
+export function addToCart(product) {
+  return {
+    type: actionTypes.ADD_TO_CART,
+    data: product
+  };
+}
