@@ -4,7 +4,7 @@ const TotalCart = ({cart}) => {
 
   return (
     <div>
-
+      Total;
     </div>
   );
 };
