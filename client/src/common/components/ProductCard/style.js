@@ -16,14 +16,17 @@ const Card = styled.div`
     margin: 0 auto;
   }
   h3{
-    font-size: 1.05rem;
-    line-height: 1.2287;
+    font-size: 0.90rem;
+    line-height: 1.3em;
     text-overflow: ellipsis;
     color: #333;
-    font-weight: 500;
+    font-weight: 700;
+  }
+  p{
+    font-size:0.85rem;
   }
   span{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:#333;
   }
 `;

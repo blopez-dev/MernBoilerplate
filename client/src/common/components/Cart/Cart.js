@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { CartWrapper, List } from './style';
 import ItemCart from '../ItemCart/ItemCart';
 import Title from '../../../application/components/Title/Title';
+import { CartWrapper, List, TotalCart } from './style';
 
 const Cart = ({ cart }) => (
   <CartWrapper>
@@ -11,12 +11,16 @@ const Cart = ({ cart }) => (
     <List>
       {cart.map((product) => (
         <ItemCart
+          product={product}
           productImage={product.img}
           productName={product.name}
           productPrice={product.price}
         />
       ))}
     </List>
+    <TotalCart>
+      TOTAL:
+    </TotalCart>
   </CartWrapper>
 );
 

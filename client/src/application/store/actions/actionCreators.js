@@ -19,3 +19,16 @@ export function addToCart(product) {
     data: product
   };
 }
+
+export function removeFromCart(product) {
+  return {
+    type: actionTypes.REMOVE_FROM_CART,
+    data: product
+  };
+}
+
+export function removeAllFromCart() {
+  return {
+    type: actionTypes.REMOVE_ALL_FROM_CART
+  };
+}
