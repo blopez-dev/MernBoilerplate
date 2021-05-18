@@ -2,18 +2,10 @@
 .idea/
 # if you remove the above rule, at least ignore the following:
 
-# User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
-# AWS User-specific
-.idea/**/aws.xml
-
-# Generated files
-.idea/**/contentModel.xml
+# User-specific stuff:
+ .idea/workspace.xml
+ .idea/tasks.xml
+ .idea/dictionaries
 
 # dependencies
 /node_modules
@@ -22,9 +14,6 @@
 
 # testing
 /coverage
-
-# ---- Sonar
-.sonar
 
 # production
 /build
@@ -52,6 +41,3 @@ coverage
 
 # dotenv environment variables file
 .env
-
-# Mongo Explorer plugin
-.idea/**/mongoSettings.xml
