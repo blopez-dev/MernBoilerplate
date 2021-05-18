@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalApp from './styles/globalStyles';
-import List from './pages/Home';
+import List from '../pages/Home';
 
 function Application() {
   return (

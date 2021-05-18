@@ -6,8 +6,6 @@ const apiUrl = 'http://localhost:4000/products';
 export function loadProducts() {
   return async (dispatch) => {
     const { data } = await axios(apiUrl);
-    // eslint-disable-next-line no-console
-    console.log(data);
     dispatch({
       type: actionTypes.LOAD_PRODUCTS,
       products: data

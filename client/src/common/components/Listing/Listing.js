@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import { List, ItemList } from './style';
 import ProductCard from '../ProductCard/ProductCard';
-import { addToCart, loadProducts } from '../../../store/actions/actionCreators';
+import { addToCart, loadProducts } from '../../../application/store/actions/actionCreators';
+import { List, ItemList, GridButtons, Quantity, AddCart } from './style';
 
 const ProductsList = ({ products, dispatch }) => {
   useEffect(() => {
@@ -21,12 +21,31 @@ const ProductsList = ({ products, dispatch }) => {
                 description={product.description}
                 price={product.price}
               />
-              <button
-                type="button"
-                onClick={() => dispatch(addToCart(product))}
-              >
-                Add to cart
-              </button>
+              <GridButtons>
+                <Quantity>
+                  <button
+                    type="button"
+                    onClick={() => dispatch()}
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => dispatch()}
+                  >
+                    -
+                  </button>
+                </Quantity>
+                <AddCart>
+                  <button
+                    type="button"
+                    onClick={() => dispatch(addToCart(product))}
+                  >
+                    Add to cart
+                  </button>
+                </AddCart>
+              </GridButtons>
+
             </ItemList>
           ))
         }
@@ -35,7 +54,13 @@ const ProductsList = ({ products, dispatch }) => {
   );
 };
 ProductsList.propTypes = {
-  products: PropTypes.shape({}).isRequired,
+  products: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired
+  }).isRequired,
   dispatch: PropTypes.func.isRequired
 };
 

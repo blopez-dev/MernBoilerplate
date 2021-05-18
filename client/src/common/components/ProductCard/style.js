@@ -8,7 +8,6 @@ const Card = styled.div`
   max-width: 290px;
   min-height: 380px;
   box-sizing: border-box;
-  border: 1px solid rgba(193, 189, 189, 0.36);
   padding:0.714rem;
   img {
     display: block;
@@ -22,6 +21,10 @@ const Card = styled.div`
     text-overflow: ellipsis;
     color: #333;
     font-weight: 500;
+  }
+  span{
+    font-size: 2rem;
+    color:#333;
   }
 `;
 
