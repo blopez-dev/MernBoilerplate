@@ -11,7 +11,7 @@ function router() {
     .put(productsController.put);
 
   routes
-    .route('/:productId')
+    .route('/:detailId')
     .put(productsController.updateProductById);
   return routes;
 }
